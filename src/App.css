@@ -1,38 +1,65 @@
-.App {
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: flex-start; /* Keep text at the top */
+  justify-content: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.container {
   text-align: center;
+  margin-top: 20vh; /* Adjust the top margin as needed */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question {
+  font-size: 50px; /* Increase the font size of the question */
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.button-yes,
+.button-no,
+.button-notSure {
+  padding: 15px 30px;
+  font-size: 20px; /* Font size of the buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-yes:hover,
+.button-no:hover,
+.button-notSure:hover {
+  background-color: #333;
+}
+
+.button-yes {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+
+.button-no {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+
+.button-notSure {
+  background-color: #ffeb3b;
+  color: #000;
+  border: none;
+  border-radius: 25px;
 }
