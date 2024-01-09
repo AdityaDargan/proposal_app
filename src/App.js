@@ -1,5 +1,6 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import './App.css';
 
 const questions = [
@@ -81,6 +82,14 @@ function App() {
     }
   };
 
+  useEffect(() => {
+      document.title = 'Secret';
+  
+      return () => {
+        document.title = 'Secret';
+      };
+    }, []);
+    
   return (
     <div className="container">
       <h1 className="text-big font-extrabold mb-8 mt-2">{questions[questionIndex]}</h1>
