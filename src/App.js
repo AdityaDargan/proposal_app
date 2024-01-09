@@ -3,8 +3,13 @@ import React, { useState } from 'react';
 import './App.css';
 
 const questions = [
-  'Will you be my girlfriend?',
-  'Do you promise to be my forever love?',
+  'Are you excited for your birthday?',
+  'Can we have movie nights with terrible romantic comedies?',
+  'Is it cool if I write you love notes that may make you cringe?',
+  'Can I annoy you for the rest of our lives?',
+  'Can I annoy you for the rest of our lives?',
+  'Is it alright if I randomly burst into love poems about you?',
+  'I Love You ❤️'
   // Add more questions if needed
 ];
 
@@ -26,14 +31,14 @@ function App() {
   };
 
   const handleButtonClick = (answer) => {
-    if (answer === 'yes' && questionIndex < questions.length - 1) {
+    if (answer === 'yes' && questionIndex < questions.length - 2) {
       // If 'Yes' is clicked on a question other than the last one, show the next question
       setQuestionIndex((prevIndex) => prevIndex + 1);
       // Reset button positions
       resetButtonPositions();
-    } else if (answer === 'yes' && questionIndex === questions.length - 1) {
+    } else if (answer === 'yes' && questionIndex === questions.length - 2) {
       // If 'Yes' is clicked on the last question, show a message or perform an action
-      setQuestionIndex(0); // Reset to the first question (you can adjust this as needed)
+      setQuestionIndex(questions.length - 1); // Reset to the first question (you can adjust this as needed)
       resetButtonPositions();
       setShowButtons(false); // Hide buttons after the last 'Yes'
     }
